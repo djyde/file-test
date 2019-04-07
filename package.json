@@ -4,7 +4,7 @@
   "main": "lib/index.js",
   "description": "Tool for the test cases that care about the generated directory structure and file content.",
   "scripts": {
-    "prepublish": "test",
+    "prepublish": "npm test",
     "test": "jest"
   },
   "devDependencies": {
