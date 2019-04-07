@@ -1,5 +1,9 @@
 # file-test
 
+[![](https://badgen.net/npm/v/file-test)](https://npm.im/file-test)
+[![](https://badgen.net/npm/dt/file-test)](https://npm.im/file-test)
+![](https://circleci.com/gh/djyde/file-test.svg?style=shield)
+
 Tool for the test cases that care about the generated directory structure and file content.
 
 ## Install
