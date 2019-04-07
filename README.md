@@ -6,6 +6,8 @@
 
 Tool for the test cases that care about the generated directory structure and file content.
 
+> Inspired by [saojs](http://saojs.org)
+
 ## Install
 
 ```bash
