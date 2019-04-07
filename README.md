@@ -74,7 +74,7 @@ The path for testing.
 
 ### include(fileName: string | string[]): boolean
 
-Return `true` if the file (or all files) is existed **diretory and file**.
+Return `true` if the file (or all files) is existed **diretory or file**.
 
 ### includeFile(fileName: string | string[]): boolean
 
