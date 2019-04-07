@@ -1,10 +1,10 @@
-const TestFile = require('../lib')
+const FileTest = require('../lib')
 const path = require('path')
 
-describe('test-file', () => {
+describe('file test', () => {
 
   const fixtures = path.resolve(__dirname, './fixtures')
-  const tf = new TestFile(fixtures)
+  const tf = new FileTest(fixtures)
 
   test('include', () => {
 

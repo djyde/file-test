@@ -1,11 +1,11 @@
-![](https://ws3.sinaimg.cn/large/006tNc79ly1g1ufjkrqjsj31kw0hkmz1.jpg)
+# file-test
 
 Tool for the test cases that care about the generated directory structure and file content.
 
 ## Install
 
 ```bash
-$ npm i test-file --save-dev
+$ npm i file-test --save-dev
 ```
 
 ## Usage
@@ -22,28 +22,28 @@ $ npm i test-file --save-dev
 ```
 
 ```js
-const TestFile = require('test-file')
+const FileTest = require('file-test')
 
-const tf = new TestFile(path.resolve(__dirname, './root'))
+const ft = new FileTest(path.resolve(__dirname, './root'))
 
-tf.includeFile('readme.md') // => true
-tf.includeFile('blabla.md') // => false
-tf.includeFile('A/a.js') // => true
-tf.includeFile('A/b.js') // => true
+ft.includeFile('readme.md') // => true
+ft.includeFile('blabla.md') // => false
+ft.includeFile('A/a.js') // => true
+ft.includeFile('A/b.js') // => true
 
-tf.readFile('A/a.js') // => console.log('hello js')
+ft.readFile('A/a.js') // => console.log('hello js')
 
-tf.includeDirectory('A') // => true
-tf.includeDirectory('B') // => true
-tf.includeDirectory('A/a.js') // => false
+ft.includeDirectory('A') // => true
+ft.includeDirectory('B') // => true
+ft.includeDirectory('A/a.js') // => false
 
-tf.include([
+ft.include([
   'readme.md',
   'A/a.js',
   'B/a.ts',
 ]) // => true
 
-tf.include([
+ft.include([
   'readme.md',
   'A/a.ts',
   'B/a.ts',
@@ -55,10 +55,10 @@ tf.include([
 
 ```js
 test('blablabla', () => {
-  expect(tf.includeDirectory('B')).toBe(true)
-  expect(tf.includeDirectory('A/a.js')).toBe(false)
-  expect(tf.readFile('A/a.js')).toEqual(`console.log('hello js')`)
-  expect(tf.include([
+  expect(ft.includeDirectory('B')).toBe(true)
+  expect(ft.includeDirectory('A/a.js')).toBe(false)
+  expect(ft.readFile('A/a.js')).toEqual(`console.log('hello js')`)
+  expect(ft.include([
     'readme.md',
     'A/a.js',
     'B/a.ts',
@@ -68,7 +68,7 @@ test('blablabla', () => {
 
 ## APIs
 
-### TestFile(path: string)
+### FileTest(path: string)
 
 The path for testing.
 
@@ -84,7 +84,7 @@ Return `true` if the file (or all files) only is existed **file**.
 
 Return `true` if the file (or all files) only is existed **directory**.
 
-### readFile(fileName: string, encoding = 'utf8'): string
+### readFile(fileName: string, encoding = 'uft8'): string
 
 Return the file content. Error will be thrown if file is not existed.
 
